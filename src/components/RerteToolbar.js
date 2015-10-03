@@ -56,7 +56,7 @@ export default class RerteToolbar extends Component {
 		return (
 			<div className="RerteToolbar">
 				<div className="SelectFontFamily SelectBox">
-					<RerteSelect options={['Open Sans', 'Arial', 'sans-serif']} select={"SelectFontFamily"} />
+					<RerteSelect options={['Arial', 'Open Sans', 'Sans Serif']} select={"SelectFontFamily"} />
 				</div>
 				<div className="SelectFontSize SelectBox">
 					<RerteSelect options={['Small', 'Normal', 'Large', 'Huge']} select={"SelectFontSize"} />

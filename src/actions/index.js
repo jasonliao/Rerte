@@ -70,3 +70,27 @@ export function align_left () {
 export function align_right () {
 	document.execCommand('justifyRight', false, null);
 }
+
+export function change_fontName (fontName='Open Sans') {
+	document.execCommand('fontName', false, fontName);
+}
+
+export function change_fontSize (fontSize='Normal') {
+	switch (fontSize) {
+		case 'Small':
+			document.execCommand('fontSize', false, 2);
+			break;
+		case 'Normal':
+			document.execCommand('fontSize', false, 3);
+			break;
+		case 'Large':
+			document.execCommand('fontSize', false, 5);
+			break;
+		case 'Huge':
+			document.execCommand('fontSize', false, 6);
+			break;
+		default:
+			document.execCommand('fontSize', false, 3);
+			break;
+	}
+}
