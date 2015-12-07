@@ -10,7 +10,6 @@ export default class RerteSelectCheck extends Component {
 	render () {
 
 		let className = "fa " + "fa-" + this.props.command.type;
-
 		return (
 			<div className="RerteSelectCheck">
 				<input id={this.props.command.type} type="checkbox" checked={this.props.command.display} onChange={this.onChangeHandle.bind(this)} />

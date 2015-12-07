@@ -4,29 +4,31 @@ import RerteSelectCheck from './RerteSelectCheck';
 import RerteSelect from './RerteSelect';
 import $ from 'jquery';
 
+let commands = [
+	{type: 'bold',display: true},
+	{type: 'italic',display: true},
+	{type: 'underline',display: true},
+	{type: 'strikethrough',display: true},
+	{type: 'subscript',display: true},
+	{type: 'superscript',display: true},
+	{type: 'indent',display: true},
+	{type: 'outdent',display: true},
+	{type: 'list-ul',display: true},
+	{type: 'list-ol',display: true},
+	{type: 'align-left',display: true},
+	{type: 'align-center',display: true},
+	{type: 'align-right',display: true},
+	{type: 'align-justify',display: true},
+	{type: 'link',display: true},
+	{type: 'undo',display: true},
+	{type: 'repeat',display: true}
+]
+
 export default class RerteToolbar extends Component {
 	constructor (props) {
 		super(props);
 		this.state = {
-			commands: [
-				{type: 'bold',display: true},
-				{type: 'italic',display: true},
-				{type: 'underline',display: true},
-				{type: 'strikethrough',display: true},
-				{type: 'subscript',display: true},
-				{type: 'superscript',display: true},
-				{type: 'indent',display: true},
-				{type: 'outdent',display: true},
-				{type: 'list-ul',display: true},
-				{type: 'list-ol',display: true},
-				{type: 'align-left',display: true},
-				{type: 'align-center',display: true},
-				{type: 'align-right',display: true},
-				{type: 'align-justify',display: true},
-				{type: 'link',display: true},
-				{type: 'undo',display: true},
-				{type: 'repeat',display: true}
-			]
+			commands: commands
 		};
 		$(document).click(function () {
 			$('.SelectTool').css('display', 'none');
@@ -54,7 +56,7 @@ export default class RerteToolbar extends Component {
 	}
 	render () {
 		return (
-			<div className="RerteToolbar">
+			<div className="RerteToolbar" >
 				<div className="SelectFontFamily SelectBox">
 					<RerteSelect options={['Arial', 'Open Sans', 'Sans Serif']} select={"SelectFontFamily"} />
 				</div>
